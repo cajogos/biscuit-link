@@ -13,9 +13,9 @@ class Config
 	{
 		$DATABASE = array(
 			'HOST' => 'localhost',
-			'NAME' => '',
-			'USER' => '',
-			'PASS' => ''
+			'NAME' => 'test_db',
+			'USER' => 'test_db_user',
+			'PASS' => 'dbpass123'
 			);
 		return $DATABASE[$key];
 	}
