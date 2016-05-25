@@ -8,7 +8,6 @@ Page::setDirLevel(0);
 ?>
 
 <?php Page::displayElement('header'); ?>
-<?php Page::displayElement('navbar'); ?>
 
 <h1>Welcome</h1>
 

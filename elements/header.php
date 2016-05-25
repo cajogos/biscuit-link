@@ -1,15 +1,11 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title><?= Page::getTitle() ?></title>
+	<!-- Stylesheets -->
 	<?= Page::addCSSFile('style'); ?>
-	<?= Page::addJSFile('scripts'); ?>
 </head>
 <body>
 <div class="container">
 <!-- Header Starts here -->
-<h1>Header here :)</h1>
-<hr />
+<?php Page::displayElement('navbar'); ?>
