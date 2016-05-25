@@ -55,5 +55,3 @@ class Page
 		return '<script type="text/javascript" src="' . $src . '"></script>';
 	}
 }
-
-/*<a href="<?= Page::getDirPath() ?>account/login.php">Login</a>*/
