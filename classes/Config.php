@@ -5,7 +5,7 @@ class Config
 	public static function getSiteConfig($key)
 	{
 		$SITE = array(
-			'NAME' => 'Site Name'
+			'NAME' => 'Cookie Jar'
 			);
 		return $SITE[$key];
 	}
