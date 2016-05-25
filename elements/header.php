@@ -3,6 +3,8 @@
 <head>
 	<title><?= Page::getTitle() ?></title>
 	<!-- Stylesheets -->
+	<?= Page::addCSSFile('bootstrap.min'); ?>
+	<?= Page::addCSSFile('font-awesome.min'); ?>
 	<?= Page::addCSSFile('style'); ?>
 </head>
 <body>
