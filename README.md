@@ -17,7 +17,4 @@ A simple PHP framework with everything out of the box.
 
 * User authentication system.
 * Routing mechanism with pretty URLs.
-* Views.
-* Integrate Bootstrap CSS, JS.
-* Integrate jQuery JS.
-* Integrate Font Awesome.
+* etc.
