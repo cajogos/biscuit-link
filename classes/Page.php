@@ -7,6 +7,7 @@ class Page
 	// DOCUMENT_ROOT DOESNT WORK AS EXPECTED
 	// BREAK DOWN THE VALUES USING EXPLODE
 
+	const RESOURCE_PATH_IMAGES = 'resources/images/';
 	const RESOURCE_PATH_CSS = 'resources/css/';
 	const RESOURCE_PATH_JS = 'resources/js/';
 	private static $title = null;
@@ -14,29 +15,29 @@ class Page
 
 	public static function setTitle($page_title)
 	{
-		Page::$title = $page_title;
+		self::$title = $page_title;
 	}
 	public static function getTitle()
 	{
-		if (empty(Page::$title))
+		if (empty(self::$title))
 		{
 			$title = Config::get()->site->name;
 			return Config::getSiteConfig('NAME');
 		}
-		return Page::$title;
+		return self::$title;
 	}
 	public static function setDirLevel($level)
 	{
-		Page::$dir_level = $level;
+		self::$dir_level = $level;
 	}
 	public static function getDirLevel()
 	{
-		return Page::$dir_level;
+		return self::$dir_level;
 	}
 	public static function getDirPath()
 	{
 		$str = '';
-		for ($i = 0; $i < Page::$dir_level; $i++)
+		for ($i = 0; $i < self::$dir_level; $i++)
 		{
 			$str .= '../';
 		}
@@ -44,7 +45,7 @@ class Page
 	}
 	public static function getLink($file_path)
 	{
-		return Page::getDirPath() . $file_path;
+		return self::getDirPath() . $file_path;
 	}
 	public static function displayElement($element)
 	{
@@ -52,12 +53,31 @@ class Page
 	}
 	public static function addCSSFile($css_file)
 	{
-		$href = Page::getDirPath() . Page::RESOURCE_PATH_CSS . $css_file . '.css';
+		$href = self::getDirPath() . self::RESOURCE_PATH_CSS . $css_file . '.css';
 		return '<link rel="stylesheet" href="' . $href . '" />';
 	}
 	public static function addJSFile($js_file)
 	{
-		$src = Page::getDirPath() . Page::RESOURCE_PATH_JS . $js_file . '.js';
+		$src = self::getDirPath() . self::RESOURCE_PATH_JS . $js_file . '.js';
 		return '<script type="text/javascript" src="' . $src . '"></script>';
+	}
+	public static function getImgPath($file)
+	{
+		return self::getDirPath() . self::RESOURCE_PATH_IMAGES . $file;
+	}
+	public static function addImage($file, $alt = null, $title = null)
+	{
+		$src = self::getImgPath($file);
+		$html = '<img src="' . $src . '"';
+		if (!empty($alt))
+		{
+			$html .= ' alt="' . $alt . '"';
+		}
+		if (!empty($title))
+		{
+			$html .= ' title="' . $title . '"';
+		}
+		$html .= ' />';
+		return $html;
 	}
 }
