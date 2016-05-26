@@ -5,7 +5,6 @@ class Page
 	// TODO: Automatically detect directory level
 	// NOTE: MIGHT NEED TO HARDCODE THE FILE PATH PRIOR TO DETECTION
 	// DOCUMENT_ROOT DOESNT WORK AS EXPECTED
-	// BREAK DOWN THE VALUES USING EXPLODE
 
 	const RESOURCE_PATH_IMAGES = 'resources/images/';
 	const RESOURCE_PATH_CSS = 'resources/css/';
