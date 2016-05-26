@@ -11,4 +11,11 @@ Page::setDirLevel(0);
 
 <h1>Welcome <span class="fa fa-star"></span></h1>
 
+
+<?php
+
+
+
+?>
+
 <?php Page::displayElement('footer'); ?>

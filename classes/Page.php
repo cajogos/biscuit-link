@@ -2,6 +2,11 @@
 
 class Page
 {
+	// TODO: Automatically detect directory level
+	// NOTE: MIGHT NEED TO HARDCODE THE FILE PATH PRIOR TO DETECTION
+	// DOCUMENT_ROOT DOESNT WORK AS EXPECTED
+	// BREAK DOWN THE VALUES USING EXPLODE
+
 	const RESOURCE_PATH_CSS = 'resources/css/';
 	const RESOURCE_PATH_JS = 'resources/js/';
 	private static $title = null;
@@ -15,6 +20,7 @@ class Page
 	{
 		if (empty(Page::$title))
 		{
+			$title = Config::get()->site->name;
 			return Config::getSiteConfig('NAME');
 		}
 		return Page::$title;

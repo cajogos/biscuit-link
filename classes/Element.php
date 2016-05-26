@@ -16,7 +16,7 @@ class Element
 	public function display()
 	{
 		$file_path = Element::FOLDER_PATH . $this->file_name . '.php';
-		require_once $file_path;
+		include $file_path;
 	}
 	public static function get($file_name)
 	{
@@ -26,6 +26,6 @@ class Element
 	{
 		$element  = Element::get($file_name);
 		$file_path = Page::getDirPath() . Element::FOLDER_PATH . $element->getFileName() . '.php';
-		require_once $file_path;
+		include $file_path;
 	}
 }

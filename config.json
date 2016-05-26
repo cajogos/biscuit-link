@@ -1,0 +1,19 @@
+[
+	{
+		"site":{
+			"name":"Cookie Jar"
+		},
+		"database":{
+			"host":"localhost",
+			"name":"test_db",
+			"user":"test_db_user",
+			"pass":"dbpass123"
+		},
+		"auth":{
+			"encrypt_cost":8
+		},
+		"user":{
+			"username_max_length":16
+		}
+	}
+]

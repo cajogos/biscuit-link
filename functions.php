@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 function my_autoloader($class)
 {
 	include 'classes/' . $class . '.php';
