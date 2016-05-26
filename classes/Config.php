@@ -3,7 +3,7 @@
 class Config
 {
 	// TODO: Implement caching here!
-	const DOCUMENT_ROOT_OVERRIDE = '/home/www/cookiejar/';
+	const DOCUMENT_ROOT_OVERRIDE = null;
 	private static $config = null;
 
 	public static function get()
@@ -22,7 +22,7 @@ class Config
 		{
 			$root = Config::DOCUMENT_ROOT_OVERRIDE;
 		}
-		$path = $root . 'config.json';
+		$path = $root . '/config.json';
 		$file = file_get_contents($path);
 		$json = json_decode($file);
 		Config::$config = $json[0];
