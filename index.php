@@ -16,6 +16,7 @@ Page::setDirLevel(0);
 <img src="<?= Page::getImgPath('compasses.png'); ?>" alt="compasses" />
 
 
-<?= Page::addImage('compasses.png', 'This is an image of compasses', 'Compasses'); ?>
+<?= Page::addImage('compasses.png', 'This is an image of compasses', 'Compasses', 'thumbnail'); ?>
+
 
 <?php Page::displayElement('footer'); ?>

@@ -65,7 +65,7 @@ class Page
 	{
 		return self::getDirPath() . self::RESOURCE_PATH_IMAGES . $file;
 	}
-	public static function addImage($file, $alt = null, $title = null)
+	public static function addImage($file, $alt = null, $title = null, $css_class = null)
 	{
 		$src = self::getImgPath($file);
 		$html = '<img src="' . $src . '"';
@@ -76,6 +76,10 @@ class Page
 		if (!empty($title))
 		{
 			$html .= ' title="' . $title . '"';
+		}
+		if (!empty($css_class))
+		{
+			$html .= ' class="' . $css_class . '"';
 		}
 		$html .= ' />';
 		return $html;
