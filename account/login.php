@@ -13,4 +13,6 @@ Page::setDirLevel(1);
 
 <h1>Login</h1>
 
+<img src="<?= Page::getImgPath('compasses.png'); ?>" alt="compasses" />
+
 <?php Page::displayElement('footer'); ?>

@@ -1,13 +1,14 @@
 <?php
 
-class Verify
+class Validate
 {
+	/** String Validation **/
 	public static function strLength($string, $max_length, $min_length = 0)
 	{
 		$valid = false;
-		if (Verify::strMaxLength($string, $max_length))
+		if (self::strMaxLength($string, $max_length))
 		{
-			if (Verify::strMinLength($string, $min_length))
+			if (self::strMinLength($string, $min_length))
 			{
 				$valid = true;
 			}

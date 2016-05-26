@@ -11,11 +11,12 @@ Page::setDirLevel(0);
 
 <h1>Welcome <span class="fa fa-star"></span></h1>
 
+<h2>This is Cookie Jar</h2>
 
-<?php
+<img src="<?= Page::getImgPath('compasses.png'); ?>" alt="compasses" />
 
 
+<?= Page::addImage('compasses.png', 'This is an image of compasses', 'Compasses', 'thumbnail'); ?>
 
-?>
 
 <?php Page::displayElement('footer'); ?>
