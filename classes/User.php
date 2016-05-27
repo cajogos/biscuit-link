@@ -2,7 +2,7 @@
 
 class User
 {
-	private $user_level;
+	private $user_level = Auth::AUTH_VISITOR;
 	private $username;
 	private $email;
 

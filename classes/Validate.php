@@ -2,7 +2,12 @@
 
 class Validate
 {
-	/** String Validation **/
+	/**
+	 * TODO:
+	 * - Email validation
+	 * - Alphanumerical check
+	 * - URL validation
+	 */
 	public static function strLength($string, $max_length, $min_length = 0)
 	{
 		$valid = false;

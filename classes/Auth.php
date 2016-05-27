@@ -2,7 +2,6 @@
 
 class Auth
 {
-	/** Authorisation Constants **/
 	const AUTH_VISITOR = 0;
 	const AUTH_USER = 1;
 	const AUTH_MOD = 2;
@@ -15,12 +14,15 @@ class Auth
 	{
 		if (empty(Auth::$logged_in))
 		{
-			// TODO Logic to check if logged in or not
-			// Check session variable + others
+			Auth::$logged_in = false;
+			if (!empty(Session::getValue('userloggedin')))
+			{
+				Auth::$logged_in = true;
+				// TODO: Improve this
+			}
 		}
 		return Auth::$logged_in;
 	}
-
 	public static function pass_hash($password)
 	{
 		$hash_options = array(
