@@ -10,6 +10,11 @@ class Auth
 	private static $logged_in = null;
 	private static $user_level = 0;
 
+	public static function authUser($username)
+	{
+		session_regenerate_id();
+		Session::setValue('userloggedin', $username);
+	}
 	public static function isLoggedIn()
 	{
 		if (empty(Auth::$logged_in))

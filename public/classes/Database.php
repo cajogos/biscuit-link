@@ -8,16 +8,16 @@ class Database extends PDO
 	private $db_user = null;
 	private $db_pass = null;
 
-	private function __construct()
+	public function __construct()
 	{
-		$this->db_host = Config::getDatabaseConfig('HOST');
-		$this->db_name = Config::getDatabaseConfig('NAME');
-		$this->db_user = Config::getDatabaseConfig('USER');
-		$this->db_pass = Config::getDatabaseConfig('PASS');
+		$this->db_host = Config::get()->database->host;
+		$this->db_name = Config::get()->database->name;
+		$this->db_user = Config::get()->database->user;
+		$this->db_pass = Config::get()->database->pass;
 
 		$connect_host = 'mysql:host=' . $this->db_host;
         $connect_host .= ';dbname=' . $this->db_name;
-        $connect_host .= ';charset=' . $this->charset;
+        $connect_host .= ';charset=utf8';
 
         parent::__construct($connect_host, $this->db_user, $this->db_pass);
         $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

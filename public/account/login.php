@@ -1,6 +1,6 @@
 <?php
 
-require_once '../functions.php';
+require_once '../../functions.php';
 
 Page::setTitle('Login Page');
 Page::setDirLevel(1);
@@ -26,6 +26,6 @@ Page::setDirLevel(1);
 </div>
 
 
-<a href="logout.php">LOGOUT</a>
+<a href="../api/logout.php">LOGOUT</a>
 
 <?php Page::displayElement('footer'); ?>

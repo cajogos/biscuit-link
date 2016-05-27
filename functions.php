@@ -4,6 +4,6 @@ session_start();
 
 function my_autoloader($class)
 {
-	include 'classes/' . $class . '.php';
+	include 'public/classes/' . $class . '.php';
 }
 spl_autoload_register('my_autoloader');

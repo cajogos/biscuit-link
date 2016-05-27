@@ -2,10 +2,19 @@
 
 class Request
 {
-	/* **** */
-	/* POST */
-	/* **** */
+	/* HEADER */
+	public static function redirect($url)
+	{
+		header('Location: ' . $url);
+		exit;
+	}
+	public static function redirectBack()
+	{
+		$referer = $_SERVER['HTTP_REFERER'];
+		self::redirect($referer);
+	}
 
+	/* POST */
 	public static function hasPost()
 	{
 		return (bool) $_POST;
@@ -26,15 +35,12 @@ class Request
 	{
 		if (empty($value))
 		{
-			return Request::getPostValue($key);
+			return self::getPostValue($key);
 		}
-		Request::setPostValue($key, $value);
+		self::setPostValue($key, $value);
 	}
 
-	/* *** */
 	/* GET */
-	/* *** */
-
 	public static function hasGet()
 	{
 		return (bool) $_GET;
@@ -55,15 +61,12 @@ class Request
 	{
 		if (empty($value))
 		{
-			return Request::getGetValue($key);
+			return self::getGetValue($key);
 		}
-		Request::setGetValue($key, $value);
+		self::setGetValue($key, $value);
 	}
 
-	/* ******* */
 	/* COOKIES */
-	/* ******* */
-
 	public static function getCookieValue($key)
 	{
 		if (isset($_COOKIE[$key]))

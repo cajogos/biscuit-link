@@ -1,6 +1,6 @@
 <?php
 
-require_once 'functions.php';
+require_once '../functions.php';
 
 Page::setTitle('Home');
 Page::setDirLevel(0);

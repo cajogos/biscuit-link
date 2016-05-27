@@ -5,9 +5,9 @@
 		},
 		"database":{
 			"host":"localhost",
-			"name":"test_db",
-			"user":"test_db_user",
-			"pass":"dbpass123"
+			"name":"cookiejar",
+			"user":"biscuit",
+			"pass":"iwantcookies123"
 		},
 		"auth":{
 			"encrypt_cost":8

@@ -22,7 +22,7 @@ class Config
 		{
 			$root = Config::DOCUMENT_ROOT_OVERRIDE;
 		}
-		$path = $root . '/config.json';
+		$path = $root . '/../config.json';
 		$file = file_get_contents($path);
 		$json = json_decode($file);
 		Config::$config = $json[0];
@@ -33,16 +33,6 @@ class Config
 			'NAME' => 'Cookie Jar'
 			);
 		return $SITE[$key];
-	}
-	public static function getDatabaseConfig($key)
-	{
-		$DATABASE = array(
-			'HOST' => 'localhost',
-			'NAME' => 'test_db',
-			'USER' => 'test_db_user',
-			'PASS' => 'dbpass123'
-			);
-		return $DATABASE[$key];
 	}
 	public static function getAuthConfig($key)
 	{
