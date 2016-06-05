@@ -2,13 +2,14 @@
 
 require_once '../../functions.php';
 
+$ajax = (Request::getGetValue('ajax') === 'true');
+$result = array();
+
 $username = Request::_POST('username');
 $password = Request::_POST('password');
 
 // TODO: CHECK ENTERED VALUES
 
-$ajax = (Request::getGetValue('ajax') === 'true');
-$result = array();
 if (Auth::isLoggedIn())
 {
 	$result['code'] = 202;
@@ -34,12 +35,5 @@ else
 		$result['error_msg'] = $error_message;
 	}
 }
-if (!$ajax)
-{
-	Request::redirectBack();
-}
-else
-{
-	header('Content-type: application/json');
-	echo json_encode($result);
-}
+
+returnResult($result, $ajax);

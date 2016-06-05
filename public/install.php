@@ -20,7 +20,7 @@ $sql .= 'user_username VARCHAR(' . Config::get()->user->username_max_length . ')
 $sql .= 'user_password VARCHAR(255) NOT NULL,';
 $sql .= 'user_email VARCHAR(255) NOT NULL,';
 $sql .= 'user_level INT(2) NOT NULL DEFAULT 0,';
-$sql .= 'user_registered DATE NOT NULL,';
+$sql .= 'user_registered DATETIME NOT NULL,';
 $sql .= 'last_modified TIMESTAMP NOT NULL,';
 $sql .= 'PRIMARY KEY (user_id)';
 $sql .= ');';
@@ -44,5 +44,8 @@ else
 	logError('Failed to create the admin account :(');
 	exit;
 }
+
+// TODO: SET USER LEVEL TO BE ADMIN - GET CREATED USER - CHANGE USER LEVEL
+
 logInfo('COMPLETED THE INSTALLATION OF COOKIE JAR YAY!');
 logInfo('Please delete the install.php script.');

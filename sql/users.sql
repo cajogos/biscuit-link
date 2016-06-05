@@ -6,7 +6,7 @@ CREATE TABLE cookiejar_users (
 	user_password VARCHAR(255) NOT NULL,
 	user_email VARCHAR(255) NOT NULL,
 	user_level INT(2) NOT NULL DEFAULT 0,
-	user_registered DATE NOT NULL,
+	user_registered DATETIME NOT NULL,
 	last_modified TIMESTAMP NOT NULL,
 	PRIMARY KEY (user_id)
 );

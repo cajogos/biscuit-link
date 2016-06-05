@@ -8,8 +8,9 @@ class Request
 		header('Location: ' . $url);
 		exit;
 	}
-	public static function redirectBack()
+	public static function redirectBack($result = null)
 	{
+		// TODO: HANDLE THE RESULT
 		if (!isset($_SERVER['HTTP_REFERER']))
 		{
 			self::redirect('/');

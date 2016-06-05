@@ -12,7 +12,7 @@ Page::setDirLevel(1);
 <h1>Register</h1>
 
 <div class="login-form-container">
-<form action="" method="post">
+<form action="../api/register.php" method="post">
 	<div class="form-group">
 		<label for="username">Username:</label>
 		<input type="text" name="username" class="form-control" />
@@ -27,7 +27,7 @@ Page::setDirLevel(1);
 	</div>
 	<div class="form-group">
 		<label for="password-confirm">Password Confirm:</label>
-		<input type="password-confirm" name="password-confirm" class="form-control" />
+		<input type="password" name="password-confirm" class="form-control" />
 	</div>
 	<button type="submit" class="btn btn-primary">Register</button>
 </form>
