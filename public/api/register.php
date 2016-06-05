@@ -3,7 +3,9 @@
 require_once '../../functions.php';
 
 $username = Request::_POST('username');
+$email = Request::_POST('email');
 $password = Request::_POST('password');
+$password_confirm = Request::_POST('password-confirm');
 
 // TODO: CHECK ENTERED VALUES
 
@@ -19,9 +21,8 @@ else
 {
 	try
 	{
-		if (User::login($username, $password))
+		if (User::register($username, $password, $email))
 		{
-			Auth::authUser($username);
 			$result['code'] = 101;
 			$result['status'] = 'OK';
 		}

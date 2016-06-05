@@ -5,7 +5,6 @@ class Validate
 	/**
 	 * TODO:
 	 * - Email validation
-	 * - Alphanumerical check
 	 * - URL validation
 	 */
 	public static function strLength($string, $max_length, $min_length = 0)
@@ -35,5 +34,30 @@ class Validate
 			return false;
 		}
 		return true;
+	}
+	// Check that string is alphanumerical only (letters and digits)
+	public static function strAlphaNum($string)
+	{
+		return ctype_alnum($string);
+	}
+	// Check that string contains at least one letter
+	public static function strContainsLetter($string)
+	{
+		return preg_match('/[a-zA-Z]/', $string);
+	}
+	// Check that string contains at least one digit
+	public static function strContainsDigit($string)
+	{
+		return preg_match('/\d/', $string);
+	}
+	// Check that string contains at least one special character
+	public static function strContainsSpecialChar($string)
+	{
+		return preg_match('/[^a-zA-Z\d]/', $string);
+	}
+
+	public static function email($email)
+	{
+		return filter_var($email, FILTER_VALIDATE_EMAIL);
 	}
 }

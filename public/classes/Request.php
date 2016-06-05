@@ -10,6 +10,10 @@ class Request
 	}
 	public static function redirectBack()
 	{
+		if (!isset($_SERVER['HTTP_REFERER']))
+		{
+			self::redirect('/');
+		}
 		$referer = $_SERVER['HTTP_REFERER'];
 		self::redirect($referer);
 	}

@@ -16,8 +16,6 @@ A simple PHP framework with everything out of the box.
 ### To do
 
 * Routing mechanism with pretty URLs.
-* User authentication system.
-* Configuration JSON file.
 * PHP caching system.
 * PHP Unit tests.
 * Mail Class.
