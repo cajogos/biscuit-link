@@ -25,6 +25,11 @@
 					</a>
 				</li>
 				<li>
+					<a href="<?= Page::getLink('account/register.php'); ?>">
+						<span class="fa fa-lock"></span> Register
+					</a>
+				</li>
+				<li>
 					<a href="#">Contact</a>
 				</li>
 				<li class="dropdown">
