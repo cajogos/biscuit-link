@@ -1,4 +1,4 @@
-document.onload = function()
+window.onload = function()
 {
-    console.log('HELLO!');
+    console.log('Cookie Jar is working :)');
 };
