@@ -1,4 +1,15 @@
 body {
+    text-align: center;
     font-family: 'Arial', sans-serif;
-    background: #EAEAEA;
+    padding-top: 40px;
+}
+
+h1 {
+    font-size: 40pt;
+    font-weight: 300;
+}
+
+p.small {
+    color: #777;
+    font-size: 0.9em;
 }

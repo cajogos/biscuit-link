@@ -20,10 +20,10 @@ class Template
 		}
 	}
 
-	public static function create($file)
+	public static function create($template_path)
 	{
 		$template = new Template();
-		$template->setFile($file);
+		$template->setFile($template_path);
 		return $template;
 	}
 
@@ -50,7 +50,7 @@ class Template
 		}
 		catch (SmartyException $e)
 		{
-			echo '<h1 style="color:red">Template Exception!</h1>';
+			echo '<h1 style="color:red">Cookie Jar Template Exception!</h1>';
 			echo '<h1>' . $e->getMessage() . '</h1>';
 			echo '<pre style="max-width: 500px;">';
 			print_r(debug_print_backtrace(2));

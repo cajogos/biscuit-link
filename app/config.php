@@ -7,3 +7,5 @@
  * You are advised to move this file to your .gitignore if you are to publish your application to a public repository.
  * You may also git rm the file prior to doing so.
  */
+
+define('COOKIE_JAR_VERSION', '0.0.1-alpha');
