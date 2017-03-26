@@ -26,5 +26,14 @@ Many projects are helping improve Cookie Jar, so far here are a few ideas:
 
 I encourage you to try Cookie Jar to its full potential and help improve it!
 
+### TODOs
+
+* Request class to handle GET, POST and SESSION.
+* Caching class using TempCache.
+* Elements - smart templates.
+* Cookie Jar Scripts
+* Getting Started
+* Cookie Jar official project website
+
 
 > _You are awesome!_

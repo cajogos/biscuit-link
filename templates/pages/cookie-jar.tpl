@@ -10,7 +10,7 @@
 </head>
 <body>
     <img src="/assets/images/cookiejar.png" alt="Cookie Jar"/>
-    <h1>Cookie Jar!</h1>
+    <h1>Cookie Jar</h1>
     <p>You have successfully got yer cookies in yer jar!</p>
     <p>Time to develop!</p>
     <p class="small">Version {$cookie_jar_ver}</p>

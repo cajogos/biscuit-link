@@ -1,7 +1,5 @@
 <?php
 
-
-
 /**
  * PHP Information file - use it to test your PHP installation.
  *
