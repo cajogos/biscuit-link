@@ -7,6 +7,13 @@ function handleIndexPage()
 	$tpl->display();
 }
 
+function handleHelloWorldPage()
+{
+	$tpl = Template::create('pages/hello.tpl');
+	$tpl->assign('page_title', 'Hello World!');
+	$tpl->display();
+}
+
 // 404 page
 function handle404Page()
 {
