@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a0881574ee920bfc3603d97c992635b",
+    "content-hash": "7ae8b33f27f80ed9f7b246f417c8ea29",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -59,16 +59,16 @@
         },
         {
             "name": "cajogos/php-temp-cache",
-            "version": "v1.0.1",
+            "version": "v1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cajogos/php-temp-cache.git",
-                "reference": "d290030fda8d7f44e7d435a1fc7d7532ca5bb721"
+                "reference": "0aeda95ba9cd80c4ad60f7b77fb3426b8ec30a14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cajogos/php-temp-cache/zipball/d290030fda8d7f44e7d435a1fc7d7532ca5bb721",
-                "reference": "d290030fda8d7f44e7d435a1fc7d7532ca5bb721",
+                "url": "https://api.github.com/repos/cajogos/php-temp-cache/zipball/0aeda95ba9cd80c4ad60f7b77fb3426b8ec30a14",
+                "reference": "0aeda95ba9cd80c4ad60f7b77fb3426b8ec30a14",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,7 @@
                 {
                     "name": "Carlos Ferreira",
                     "email": "c@rlos.rocks",
-                    "homepage": "http://ca.rlos.rocks",
+                    "homepage": "https://carlos.fyi",
                     "role": "Developer"
                 }
             ],
@@ -99,7 +99,7 @@
                 "caching",
                 "temp"
             ],
-            "time": "2016-12-20T22:18:30+00:00"
+            "time": "2017-04-02T19:05:18+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
