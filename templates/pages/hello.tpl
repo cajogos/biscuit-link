@@ -2,7 +2,7 @@
 {block name=head}{/block}
 
 {block name=body}
-    <h1>{$say} {$name}!</h1>
+    {$hello_element}
 {/block}
 
 {block name=js}{/block}

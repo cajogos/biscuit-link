@@ -29,7 +29,6 @@ I encourage you to try Cookie Jar to its full potential and help improve it!
 ### TODOs
 
 * Caching class using TempCache.
-* Elements - smart templates.
 * Cookie Jar Scripts
 * Getting Started
 * Cookie Jar official project website

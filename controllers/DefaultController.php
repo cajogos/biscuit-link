@@ -20,8 +20,12 @@ class DefaultController extends Controller
 			$say = 'Hello';
 		}
 		$tpl = Template::create('pages/hello.tpl');
-		$tpl->assign('say', $say);
-		$tpl->assign('name', $name);
+
+		$hello_element = HelloElement::get();
+		$hello_element->setName($name);
+		$hello_element->setSaying($say);
+		$tpl->addElement('hello_element', $hello_element);
+		
 		$tpl->display();
 	}
 }

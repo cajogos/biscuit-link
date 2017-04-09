@@ -7,7 +7,7 @@ class Template
 	private function __construct()
 	{
 		$template_dir = $_SERVER['DOCUMENT_ROOT'] . '/../templates/';
-		$compile_dir = '/tmp/cookie-jar-templates/';
+		$compile_dir = '/tmp/cookie-jar-tpl/';
 		$this->smarty = new Smarty();
 		$this->smarty->setTemplateDir($template_dir);
 		$this->smarty->setCompileDir($compile_dir);
@@ -40,6 +40,15 @@ class Template
 	public function assign($key, $value)
 	{
 		$this->smarty->assign($key, $value);
+	}
+
+	public function addElement($element_id, Element $element)
+	{
+		if (!is_a($element, 'Element'))
+		{
+			throw new Exception('You MUST add an Element object when using addElement function');
+		}
+		$this->smarty->assign($element_id, $element->getString());
 	}
 
 	public function display()
