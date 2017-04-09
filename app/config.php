@@ -9,3 +9,4 @@
  */
 
 define('COOKIE_JAR_VERSION', '0.0.1-alpha');
+define('DEV_MODE', 1);

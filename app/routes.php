@@ -8,8 +8,8 @@
 $router = new AltoRouter();
 
 // Application mappings
-$router->map('GET', '/', 'handleIndexPage', 'index');
-$router->map('GET', '/hello', 'handleHelloWorldPage');
+$router->map('GET', '/', 'IndexController::display', 'index');
+$router->map('GET', '/hello', 'PageTest::helloPage');
 
 
 // Page functions
