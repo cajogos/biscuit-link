@@ -28,7 +28,6 @@ I encourage you to try Cookie Jar to its full potential and help improve it!
 
 ### TODOs
 
-* Request class to handle GET, POST and SESSION.
 * Caching class using TempCache.
 * Elements - smart templates.
 * Cookie Jar Scripts
