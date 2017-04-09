@@ -3,9 +3,9 @@
 /**
  * Class IndexController
  */
-class IndexController implements Controller
+class IndexController extends Controller
 {
-	public static function display()
+	public static function display2()
 	{
 		$tpl = Template::create('pages/cookie-jar.tpl');
 		$tpl->assign('cookie_jar_ver', COOKIE_JAR_VERSION);
