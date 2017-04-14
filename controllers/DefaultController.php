@@ -28,4 +28,15 @@ class DefaultController extends Controller
 		
 		$tpl->display();
 	}
+
+	public static function markdown()
+	{
+		$tpl = Template::create('pages/markdown-test.tpl');
+
+		$markdown_el = MarkdownElement::get();
+		$markdown_el->setFile('test');
+		$tpl->addElement('markdown_element', $markdown_el);
+
+		$tpl->display();
+	}
 }
