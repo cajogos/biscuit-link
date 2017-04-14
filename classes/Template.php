@@ -7,7 +7,7 @@ class Template
 	private function __construct()
 	{
 		$template_dir = $_SERVER['DOCUMENT_ROOT'] . '/../templates/';
-		$compile_dir = '/tmp/cookie-jar-tpl/';
+		$compile_dir = '/tmp/biscuit-link-templates/';
 		$this->smarty = new Smarty();
 		$this->smarty->setTemplateDir($template_dir);
 		$this->smarty->setCompileDir($compile_dir);
@@ -59,7 +59,7 @@ class Template
 		}
 		catch (SmartyException $e)
 		{
-			echo '<h1 style="color:red">Cookie Jar Template Exception!</h1>';
+			echo '<h1 style="color:red">Biscuit Link Template Exception!</h1>';
 			echo '<h1>' . $e->getMessage() . '</h1>';
 			echo '<pre style="max-width: 500px;">';
 			print_r(debug_print_backtrace(2));

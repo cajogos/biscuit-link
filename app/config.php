@@ -8,5 +8,5 @@
  * You may also git rm the file prior to doing so.
  */
 
-define('COOKIE_JAR_VERSION', '0.0.1-alpha');
+define('BISCUIT_LINK_VERSION', '0.0.1-alpha');
 define('DEV_MODE', 1);

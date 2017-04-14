@@ -4,8 +4,8 @@ class DefaultController extends Controller
 {
 	public static function display()
 	{
-		$tpl = Template::create('pages/cookie-jar.tpl');
-		$tpl->assign('cookie_jar_ver', COOKIE_JAR_VERSION);
+		$tpl = Template::create('pages/biscuit-link.tpl');
+		$tpl->assign('biscuit_link_ver', BISCUIT_LINK_VERSION);
 		$tpl->display();
 	}
 
