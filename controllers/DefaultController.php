@@ -1,5 +1,8 @@
 <?php
 
+use Cajogos\Biscuit\Template as Template;
+use Cajogos\Biscuit\Controller as Controller;
+
 class DefaultController extends Controller
 {
 	public static function display()

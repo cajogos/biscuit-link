@@ -1,5 +1,8 @@
 <?php
 
+use Cajogos\Biscuit\Template as Template;
+use Cajogos\Biscuit\Element as Element;
+
 /**
  * Class HelloElement
  *
