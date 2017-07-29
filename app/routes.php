@@ -35,7 +35,7 @@ function handleRouting(AltoRouter $router)
 	else
 	{
 		header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found');
-		$tpl = Template::create('pages/404.tpl');
+		$tpl = Cajogos\Biscuit\Template::create('pages/404.tpl');
 		$tpl->display();
 	}
 }
