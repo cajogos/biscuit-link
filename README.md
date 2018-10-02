@@ -1,4 +1,4 @@
-# Biscuit Link _(Currently in Development)_
+# Biscuit Link _("Currently" in Development)_
 
 A PHP framework for people who do not want to waste time. Just `git clone` and `vagrant up` and you are running!
 
